@@ -1,0 +1,297 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background: rgb(43, 42, 42);
+    background-size: cover;
+    position: absolute;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+/*main box*/
+
+.main-box {
+    width: 320px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 30px 0;
+    box-shadow: inset 2px 5px 10px rgb(0, 0, 0);
+}
+
+.sp {
+    position: absolute;
+    transition: 0.5s;
+}
+
+.sp-t {
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(to left, transparent, #be0000, #0c01b1);
+    animation: anim2 2s linear infinite;
+    transform: translateY(-300%);
+    animation-delay: 0.8s;
+}
+
+.sp-r {
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height: 200px;
+    background: linear-gradient(to left, transparent, #c90000, #1502c0);
+    animation: anim1 2s linear infinite;
+    animation-delay: 0s;
+}
+
+.sp-b {
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(to left, transparent, #0003aa, #d40202);
+    animation: anim2 2s linear infinite;
+}
+
+.sp-l {
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 200px;
+    background: linear-gradient(to left, transparent, #0104b6, #d80000);
+    animation: anim1 2s linear infinite;
+    animation-delay: 1s;
+    transform: translateX(-300%);
+}
+
+@keyframes anim1 {
+    0% {
+        transform: translateY(300%);
+    }
+
+    100% {
+        transform: translateY(-300%);
+    }
+}
+
+@keyframes anim2 {
+    0% {
+        transform: translateX(300%);
+    }
+
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+/*main box end*/
+
+.form-box {
+    width: 316px;
+    height: 476px;
+    position: relative;
+    background: #252525;
+    padding: 5px;
+    overflow: hidden;
+    z-index: 5;
+    border-radius: 30px 0;
+    color: white;
+    box-shadow: inset 3px 7px 13px rgb(5, 5, 5);
+
+}
+
+#after {
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    background: #2d2e30;
+    z-index: -1;
+    transition: 0.5s;
+    border-radius: 30px 0;
+    color: white;
+    box-shadow: inset 3px 7px 13px rgb(5, 5, 5);
+
+}
+
+.button-box {
+    width: 220px;
+    margin: 35px auto 30px auto;
+    position: relative;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    animation: animBTN 5s linear infinite;
+}
+
+@keyframes animBTN {
+    0% {
+        box-shadow: 0 0 10px 9px rgba(219, 179, 211, 0.3);
+    }
+
+    33% {
+        box-shadow: 0 0 10px 9px rgba(209, 114, 168, 0.3);
+    }
+
+    66.9% {
+        box-shadow: 0 0 10px 9px rgba(150, 18, 135, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 10px 9px rgba(100, 5, 89, 0.3);
+    }
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(234, 234, 235);
+    outline: none;
+    position: relative;
+    transition: 0.5s;
+}
+
+#btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to left,transparent,rgb(139, 17, 27),#cc0a0a);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.input-group {
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 150px;
+    position: absolute;
+    padding: 0 30px;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 5px;
+    margin: 15px 0;
+    border-top: 0;
+    border-right: 0;
+    outline: none;
+    color: rgb(234, 234, 235);
+    font-size: 15px;
+    transition: 0.5s;
+    border-radius: 15px 0;
+    color: white;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-field:focus {
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    animation: animINP 5s linear infinite, animBTN 5s linear infinite;
+}
+
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 0 auto;
+    background: linear-gradient(to left, transparent, #8f1a1a, #c90c0c);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    position: relative;
+    z-index: 5;
+    box-sizing: border-box;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.submit-btn:hover {
+    background: #000000;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: inset 4px 4px 6px -1px rgba(234, 234, 235, 0.2),
+        inset 4px 4px 6px -1px rgba(37, 37, 37, 0.7), 0 0 5px #770a0a,
+        0 0 25px #dc2d2d, 0 0 50px #fd0202, 0 0 100px #581010;
+}
+
+.span {
+    margin: 20px 0;
+    color: rgb(234, 234, 235);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*position: absolute;
+bottom: 88px;*/
+}
+
+.check-box {
+    margin: 0 10px;
+    padding: 0;
+}
+
+#login {
+    left: 0px;
+}
+
+#register {
+    left: 500px;
+}
+
+@keyframes a {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+@keyframes animBTN {
+    0% {
+        box-shadow: 0 0 10px 9px rgba(31, 184, 211, 0.3);
+    }
+
+    33% {
+        box-shadow: 0 0 10px 9px rgba(31, 120, 171, 0.3);
+    }
+
+    66.9% {
+        box-shadow: 0 0 10px 9px rgba(19, 171, 125, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 10px 9px rgba(50, 223, 229, 0.3);
+    }
+}
